@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: iart
+Version: 0.1.4
+Summary: A reporting tool for exporting iAuditor inspections into human readable Excel or CSV files.
+Home-page: UNKNOWN
+Author: Edd
+Author-email: edward.abrahamsen-mills@safetyculture.io
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.1,<4.0.0
