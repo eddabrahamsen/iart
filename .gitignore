@@ -3,7 +3,7 @@
 test.py
 config.ini
 .idea
-PyInstaller/
+PyInstaller/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
