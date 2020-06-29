@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "iart"
-version = "0.1.4"
+version = "0.1.5"
 description = "A reporting tool for exporting iAuditor inspections into human readable Excel or CSV files."
 authors = ["Edd <edward.abrahamsen-mills@safetyculture.io>"]
 packages = [
     { include = "modules", from = "iart"},
-    { include = "__main__.py", from = "iart"}
+    { include = "iart.py", from = "iart"}
 ]
 
 [tool.poetry.dependencies]

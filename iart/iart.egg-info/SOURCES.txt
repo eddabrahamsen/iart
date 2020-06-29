@@ -1,6 +1,6 @@
 README.rst
 setup.py
-iart/__main__.py
+iart/iart.py
 iart/iart.egg-info/PKG-INFO
 iart/iart.egg-info/SOURCES.txt
 iart/iart.egg-info/dependency_links.txt
