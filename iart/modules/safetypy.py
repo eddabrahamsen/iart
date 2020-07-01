@@ -161,7 +161,7 @@ class SafetyCulture:
                         modified_before=None,
                         completed=True,
                         archived=False,
-                        limit=100,
+                        limit=1000,
                         order='asc'):
         """
         Return IDs of all completed audits if no parameters are passed, otherwise restrict search

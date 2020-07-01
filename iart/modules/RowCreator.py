@@ -16,7 +16,7 @@ IGNORED_TYPES = ['smartfield', 'primeelement',
                  'element', 'information',
                  'information - media', 'information - ']
 COMMON_DATA = ['AuditID', 'Name',
-               'DateStarted', 'Percentage Score',
+               'DateStarted', 'DateCompleted', 'ConductedBy', 'Percentage Score',
                'Score', 'Site', 'Area', 'Region',
                'Template Name']
 DELIMITER = chr(255)
@@ -168,7 +168,7 @@ class RowCreator:
                                     'Name': item_values[21],
                                     'DateStarted': item_values[26],
                                     'DateCompleted': item_values[28],
-                                    'Percentage Score': item_values[25],
+                                    'Percentage Score': item_values[24],
                                     'Score': item_values[22],
                                     'Site': item_values[42],
                                     'Area': item_values[43],
@@ -176,6 +176,8 @@ class RowCreator:
                                     'Template Name': item_values[31]
                                     }
                 common_response = common_data_dict.get(item_id)
+                # print(item_id)
+                # print(common_response)
                 row[item_id].append(common_response)
                 response_found = True
             else:
