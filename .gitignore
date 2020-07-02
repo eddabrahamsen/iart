@@ -3,11 +3,15 @@
 test.py
 config.ini
 .idea
+!PyInstaller/
 PyInstaller/*
-!/PyInstaller/configure/iart-configure.py
-!/PyInstaller/configure/iart-configure.spec
-!/PyInstaller/export/iart-export.py
-!/PyInstaller/export/iart-export.spec
+!PyInstaller/configure/
+!PyInstaller/configure/iart-configure.py
+!PyInstaller/configure/iart-configure.spec
+
+!PyInstaller/export/
+!PyInstaller/export/iart-export.py
+!PyInstaller/export/iart-export.spec
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
