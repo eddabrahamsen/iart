@@ -6,7 +6,6 @@ block_cipher = None
 
 
 a = Analysis(['iart-configure.py', 'iart-configure.spec'],
-             pathex=['/Users/edd/PythonVenvs/rep-tool/PyInstaller/configure'],
              binaries=[],
              datas=[
                  (os.path.dirname(wcwidth.__file__), 'wcwidth')                 
