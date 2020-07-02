@@ -6,7 +6,7 @@ block_cipher = None
 
 
 a = Analysis(['iart-configure.py', 'iart-configure.spec'],
-             binaries=[],
+git              binaries=[],
              datas=[
                  (os.path.dirname(wcwidth.__file__), 'wcwidth')                 
                  ],
