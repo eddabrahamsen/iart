@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "iart"
-version = "0.1.5"
+version = "0.1.6"
 description = "A reporting tool for exporting iAuditor inspections into human readable Excel or CSV files."
 authors = ["Edd <edward.abrahamsen-mills@safetyculture.io>"]
 packages = [

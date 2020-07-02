@@ -252,7 +252,6 @@ class ConfigSetup:
                     sp = safetypy.SafetyCulture(config['options']['token'])
                     return sp
         else:
-            print('No API Token found. Run interactive set up first.')
             return None
 
     def get_list_of_templates(self):

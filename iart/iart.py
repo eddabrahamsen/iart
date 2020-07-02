@@ -28,6 +28,8 @@ import sys, os
 # print( 'sys.argv[0] is', sys.argv[0] )
 # print( 'sys.executable is', sys.executable )
 # print( 'os.getcwd is', os.getcwd() )
+os.chdir(os.path.dirname(sys.argv[0]))
+
 app = typer.Typer()
 
 IGNORED_TYPES = ['smartfield', 'primeelement', 'section', 'category', 'element']
