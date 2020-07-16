@@ -8,7 +8,7 @@ import dateparser
 import typer
 from dateparser.search import search_dates
 
-from modules import csvExporter, safetypy
+from iart.modules import csvExporter, safetypy
 from tqdm import tqdm
 
 IGNORED_TYPES = ['smartfield', 'primeelement',

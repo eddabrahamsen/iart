@@ -25,7 +25,7 @@ typer = "^0.2.1"
 pytest = "^4.6"
 
 [tool.poetry.scripts]
-iart_export = "iart.iart:export_script"
+iart_export = "iart.iart:export"
 iart_setup = "iart.iart:interactive_setup"
 
 [build-system]

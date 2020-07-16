@@ -12,8 +12,8 @@ from dateparser.search import search_dates
 from tqdm import tqdm
 from xlsxwriter.utility import xl_col_to_name
 
-from modules import safetypy
-from modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
+from iart.modules import safetypy
+from iart.modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
 import sys, os
 # frozen = 'not'
 # if getattr(sys, 'frozen', False):
@@ -354,10 +354,6 @@ def interactive_setup():
 
 @app.command()
 def export():
-    export_script()
-
-
-def export_script():
     config = ConfigSetup()
     if config.config:
         typer.echo('Exporting using the same settings as last time.')
