@@ -28,7 +28,10 @@ import sys, os
 # print( 'sys.argv[0] is', sys.argv[0] )
 # print( 'sys.executable is', sys.executable )
 # print( 'os.getcwd is', os.getcwd() )
-os.chdir(os.path.dirname(sys.argv[0]))
+print(sys.argv[0])
+
+if sys.argv[0] not in ['iart_export','iart_setup']:
+    os.chdir(os.path.dirname(sys.argv[0]))
 
 app = typer.Typer()
 
@@ -351,6 +354,10 @@ def interactive_setup():
 
 @app.command()
 def export():
+    export_script()
+
+
+def export_script():
     config = ConfigSetup()
     if config.config:
         typer.echo('Exporting using the same settings as last time.')
