@@ -1,4 +1,6 @@
 import configparser
+import os
+import sys
 import time
 from operator import itemgetter
 
@@ -11,10 +13,9 @@ from PyInquirer import prompt
 from dateparser.search import search_dates
 from tqdm import tqdm
 from xlsxwriter.utility import xl_col_to_name
+from modules import safetypy
+from modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
 
-from iart.modules import safetypy
-from iart.modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
-import sys, os
 # frozen = 'not'
 # if getattr(sys, 'frozen', False):
 #         # we are running in a bundle

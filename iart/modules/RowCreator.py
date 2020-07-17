@@ -1,5 +1,4 @@
 import configparser
-import sys
 from collections import OrderedDict
 from datetime import datetime, timedelta
 from operator import itemgetter
@@ -8,7 +7,7 @@ import dateparser
 import typer
 from dateparser.search import search_dates
 
-from iart.modules import csvExporter, safetypy
+from iart.modules import safetypy, csvExporter
 from tqdm import tqdm
 
 IGNORED_TYPES = ['smartfield', 'primeelement',
