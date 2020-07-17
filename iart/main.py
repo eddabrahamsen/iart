@@ -16,22 +16,10 @@ from xlsxwriter.utility import xl_col_to_name
 from iart.modules import safetypy
 from iart.modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
 
-# frozen = 'not'
-# if getattr(sys, 'frozen', False):
-#         # we are running in a bundle
-#         frozen = 'ever so'
-#         bundle_dir = sys._MEIPASS
-# else:
-#         # we are running in a normal Python environment
-#         bundle_dir = os.path.dirname(os.path.abspath(__file__))
-# print( 'we are',frozen,'frozen')
-# print( 'bundle dir is', bundle_dir )
-# print( 'sys.argv[0] is', sys.argv[0] )
-# print( 'sys.executable is', sys.executable )
-# print( 'os.getcwd is', os.getcwd() )
-
-if sys.argv[0] not in ['iart_export','iart_setup']:
-    os.chdir(os.path.dirname(sys.argv[0]))
+if getattr(sys, 'frozen', False):
+    # we are running in a bundle
+    bundle_dir = sys._MEIPASS
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 app = typer.Typer()
 
@@ -295,7 +283,6 @@ def interactive_login():
 
 @app.command()
 def interactive_setup():
-
     iauditor_reporting_tool = set_typer_colour('iAuditor Reporting tool', colour=typer.colors.BRIGHT_MAGENTA,
                                                bold=True)
     api_token_str = set_typer_colour('API token', colour=typer.colors.BRIGHT_MAGENTA, bold=True)
@@ -310,11 +297,11 @@ def interactive_setup():
         token = interactive_login()
     else:
         overwrite_token = [
-        {
-            'type': 'confirm',
-            'name': 'existing_token',
-            'message': 'You already have an API token saved. Do you need to regenerate it?'
-        }
+            {
+                'type': 'confirm',
+                'name': 'existing_token',
+                'message': 'You already have an API token saved. Do you need to regenerate it?'
+            }
         ]
         ask_to_overwrite_token = prompt(overwrite_token)
         if ask_to_overwrite_token['existing_token'] is True:
