@@ -13,8 +13,8 @@ from PyInquirer import prompt
 from dateparser.search import search_dates
 from tqdm import tqdm
 from xlsxwriter.utility import xl_col_to_name
-from modules import safetypy
-from modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
+from iart.modules import safetypy
+from iart.modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
 
 # frozen = 'not'
 # if getattr(sys, 'frozen', False):
@@ -29,7 +29,6 @@ from modules.RowCreator import RowCreator, TemplateCreator, ConfigSetup
 # print( 'sys.argv[0] is', sys.argv[0] )
 # print( 'sys.executable is', sys.executable )
 # print( 'os.getcwd is', os.getcwd() )
-print(sys.argv[0])
 
 if sys.argv[0] not in ['iart_export','iart_setup']:
     os.chdir(os.path.dirname(sys.argv[0]))
