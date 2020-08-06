@@ -1,2 +1,2 @@
 # iart
-A Python script for exporting Inspections into a formatted Excel file
+A Python script for exporting iAuditor inspections into a formatted Excel file
